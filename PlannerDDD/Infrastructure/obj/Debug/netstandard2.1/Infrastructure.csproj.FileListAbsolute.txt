@@ -1,0 +1,13 @@
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Infrastructure/bin/Debug/netstandard2.1/Infrastructure.deps.json
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Infrastructure/bin/Debug/netstandard2.1/Infrastructure.dll
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Infrastructure/bin/Debug/netstandard2.1/Infrastructure.pdb
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Infrastructure/bin/Debug/netstandard2.1/Domain.dll
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Infrastructure/bin/Debug/netstandard2.1/Domain.pdb
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.csproj.AssemblyReference.cache
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.AssemblyInfoInputs.cache
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.AssemblyInfo.cs
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.csproj.CoreCompileInputs.cache
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.csproj.CopyComplete
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.dll
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.pdb

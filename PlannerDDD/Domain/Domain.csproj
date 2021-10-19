@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Base\" />
+    <None Remove="Entities\" />
+    <None Remove="Entities\WorkItems\" />
+    <None Remove="Interfaces\" />
+    <None Remove="MediatR" />
+    <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+    <None Remove="Entities\Users\" />
+    <None Remove="Entities\UserProfile\" />
+    <None Remove="Entities\RoleDetail\" />
+    <None Remove="Entities\RoleDetailUserProfiles\" />
+    <None Remove="Entities\Roles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Base\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Entities\WorkItems\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Entities\Users\" />
+    <Folder Include="Entities\UserProfiles\" />
+    <Folder Include="Entities\RoleDetails\" />
+    <Folder Include="Entities\RoleDetailUserProfiles\" />
+    <Folder Include="Entities\Roles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.11" />
+  </ItemGroup>
+</Project>

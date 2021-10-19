@@ -1,0 +1,9 @@
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Domain/bin/Debug/netstandard2.1/Domain.deps.json
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Domain/bin/Debug/netstandard2.1/Domain.dll
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Domain/bin/Debug/netstandard2.1/Domain.pdb
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Domain/obj/Debug/netstandard2.1/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Domain/obj/Debug/netstandard2.1/Domain.AssemblyInfoInputs.cache
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Domain/obj/Debug/netstandard2.1/Domain.AssemblyInfo.cs
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Domain/obj/Debug/netstandard2.1/Domain.csproj.CoreCompileInputs.cache
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Domain/obj/Debug/netstandard2.1/Domain.dll
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Domain/obj/Debug/netstandard2.1/Domain.pdb
