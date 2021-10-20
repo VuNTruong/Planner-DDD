@@ -1,11 +1,9 @@
 ﻿<Properties StartupConfiguration="{19A356F2-6877-417E-97CA-DD2C870C276D}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Domain/Entities/WorkItems/WorkItem.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PlannerDDD/Extensions/ServiceCollectionExtensions.cs">
     <Files>
-      <File FileName="PlannerDDD/Services/WorkItems/WorkItemService.cs" Line="22" Column="48" />
-      <File FileName="PlannerDDD/Controllers/WorkItemController.cs" Line="64" Column="1" />
-      <File FileName="Domain/Entities/WorkItems/WorkItem.cs" Line="9" Column="39" />
-      <File FileName="Domain/Entities/UserProfiles/UserProfile.cs" Line="10" Column="6" />
-      <File FileName="Domain/Entities/RoleDetails/RoleDetail.cs" Line="13" Column="28" />
+      <File FileName="Interface/IUserProfileRepository.cs" Line="10" Column="1" />
+      <File FileName="Interface/IWorkItemRepository.cs" Line="4" Column="24" />
+      <File FileName="PlannerDDD/Extensions/ServiceCollectionExtensions.cs" Line="4" Column="17" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,16 +11,7 @@
           <Node name="PlannerDDD" expanded="True">
             <Node name="Domain" expanded="True">
               <Node name="Base" expanded="True" />
-              <Node name="Entities" expanded="True">
-                <Node name="RoleDetails" expanded="True" />
-                <Node name="RoleDetailUserProfiles" expanded="True" />
-                <Node name="Roles" expanded="True" />
-                <Node name="UserProfiles" expanded="True" />
-                <Node name="Users" expanded="True" />
-                <Node name="WorkItems" expanded="True">
-                  <Node name="WorkItem.cs" selected="True" />
-                </Node>
-              </Node>
+              <Node name="Entities" expanded="True" />
               <Node name="Interfaces" expanded="True" />
             </Node>
             <Node name="Infrastructure" expanded="True">
@@ -31,17 +20,17 @@
                 <Node name="Repositories" expanded="True" />
               </Node>
             </Node>
-            <Node name="PlannerDDD" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Extensions" expanded="True" />
-              <Node name="MapperConfig" expanded="True" />
-              <Node name="Services" expanded="True">
-                <Node name="WorkItems" expanded="True" />
-              </Node>
-              <Node name="ViewModels" expanded="True">
-                <Node name="WorkItems" expanded="True" />
-              </Node>
+            <Node name="Interface" expanded="True">
+              <Node name="Shared" expanded="True" />
             </Node>
+            <Node name="PlannerDDD" expanded="True">
+              <Node name="Extensions" expanded="True">
+                <Node name="ServiceCollectionExtensions.cs" selected="True" />
+              </Node>
+              <Node name="MapperConfig" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+            </Node>
+            <Node name="Service" expanded="True" />
           </Node>
         </State>
       </Pad>

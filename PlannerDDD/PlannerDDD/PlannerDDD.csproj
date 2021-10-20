@@ -9,8 +9,6 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Services\" />
-    <None Remove="Services\WorkItems\" />
     <None Remove="ViewModels\" />
     <None Remove="ViewModels\WorkItems\" />
     <None Remove="Extensions\" />
@@ -19,18 +17,27 @@
     <None Remove="MapperConfig\" />
     <None Remove="Microsoft.Extensions.DependencyInjection" />
     <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Microsoft.Extensions.Identity.Core" />
+    <None Remove="Microsoft.AspNetCore.Identity" />
+    <None Remove="ViewModels\Auth\" />
+    <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\" />
-    <Folder Include="Services\WorkItems\" />
     <Folder Include="ViewModels\" />
     <Folder Include="ViewModels\WorkItems\" />
     <Folder Include="Extensions\" />
     <Folder Include="MapperConfig\" />
+    <Folder Include="ViewModels\Auth\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="AutoMapper" Version="10.1.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="5.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Service\Service.csproj" />
   </ItemGroup>
 </Project>

@@ -1,7 +1,9 @@
 ﻿using System.Text.Json.Serialization;
+using Domain.Entities;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -38,8 +40,36 @@ namespace PlannerDDD
                 options.UseSqlServer(connectionString).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
             });
 
+            // Add Identity with default configurations for User into Identity Role
+            // Use EF to save information about Identity
+            // Add Token provider
+            // We MUST ADD user manager and sign in manager here
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<EFContext>()
+                .AddDefaultTokenProviders()
+                .AddUserManager<UserManager<User>>()
+                .AddSignInManager<SignInManager<User>>();
+
+            // Add authentication and authorization
+            services.AddAuthentication();
+            services.AddAuthorization();
+
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Configure password
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+
+                // Configure email unique
+                options.User.RequireUniqueEmail = true;
+            });
+
+            // Add auto mapper
             services.AddAutoMapper(typeof(Startup));
 
+            // Configure JSON result
             services.AddControllers().AddJsonOptions(x =>
                 x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
         }
@@ -56,6 +86,9 @@ namespace PlannerDDD
                 
             app.UseRouting();
 
+            // Add authentication and authorization
+            // authentication MUST BE placed before authorization
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

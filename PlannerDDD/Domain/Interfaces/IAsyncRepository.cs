@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Domain.Interfaces
 {
+    /// <summary>
+    /// Basic CRUD functions
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public interface IAsyncRepository<T> where T : BaseEntity
     {
         // The function to add new entity

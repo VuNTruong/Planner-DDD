@@ -1,15 +1,10 @@
-﻿using Domain.Base;
-using Domain.Entities;
-using Domain.Entities.RoleDetails;
-using Domain.Entities.RoleDetailUserProfiles;
-using Domain.Entities.Roles;
-using Domain.Entities.UserProfiles;
-using Domain.Entities.WorkItems;
+﻿using Domain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Data
 {
-    public class EFContext : DbContext
+    public class EFContext : IdentityDbContext<User>
     {
         public EFContext()
         {
@@ -23,7 +18,14 @@ namespace Infrastructure.Data
         // Create Work Item entity
         public DbSet<WorkItem> WorkItems { get; set; }
 
-        //public DbSet<BaseDomainEvent> BaseDomainEvents { get; set; }
+        // Create user profile entity
+        public DbSet<UserProfile> UserProfiles { get; set; }
+
+        // Create role detail entity
+        public DbSet<RoleDetail> RoleDetails { get; set; }
+
+        // Create role detail user profile entity
+        public DbSet<RoleDetailUserProfile> RoleDetailUserProfiles { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

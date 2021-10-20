@@ -46,8 +46,12 @@
 /Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/PlannerDDD/bin/Debug/net5.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
 /Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/PlannerDDD/bin/Debug/net5.0/Domain.dll
 /Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/PlannerDDD/bin/Debug/net5.0/Infrastructure.dll
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/PlannerDDD/bin/Debug/net5.0/Interface.dll
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/PlannerDDD/bin/Debug/net5.0/Service.dll
 /Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/PlannerDDD/bin/Debug/net5.0/Infrastructure.pdb
 /Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/PlannerDDD/bin/Debug/net5.0/Domain.pdb
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/PlannerDDD/bin/Debug/net5.0/Service.pdb
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/PlannerDDD/bin/Debug/net5.0/Interface.pdb
 /Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/PlannerDDD/obj/Debug/net5.0/PlannerDDD.csproj.AssemblyReference.cache
 /Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/PlannerDDD/obj/Debug/net5.0/PlannerDDD.GeneratedMSBuildEditorConfig.editorconfig
 /Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/PlannerDDD/obj/Debug/net5.0/PlannerDDD.AssemblyInfoInputs.cache

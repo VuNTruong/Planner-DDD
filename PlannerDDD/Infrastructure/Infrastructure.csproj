@@ -17,6 +17,7 @@
     <Folder Include="Data\Repositories\" />
 
     <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Interface\Interface.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.11" />

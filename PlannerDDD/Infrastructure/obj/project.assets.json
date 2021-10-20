@@ -2119,6 +2119,19 @@
         "runtime": {
           "bin/placeholder/Domain.dll": {}
         }
+      },
+      "Interface/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Interface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Interface.dll": {}
+        }
       }
     }
   },
@@ -7347,11 +7360,17 @@
       "type": "project",
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "Interface/1.0.0": {
+      "type": "project",
+      "path": "../Interface/Interface.csproj",
+      "msbuildProject": "../Interface/Interface.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "Domain >= 1.0.0",
+      "Interface >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.11"
     ]
@@ -7383,6 +7402,9 @@
           "projectReferences": {
             "/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Domain/Domain.csproj": {
               "projectPath": "/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Domain/Domain.csproj"
+            },
+            "/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Interface/Interface.csproj": {
+              "projectPath": "/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Interface/Interface.csproj"
             }
           }
         }

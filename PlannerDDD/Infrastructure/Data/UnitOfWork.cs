@@ -1,10 +1,13 @@
 ﻿using System.Threading.Tasks;
 using Domain.Base;
-using Domain.Interfaces;
 using Infrastructure.Data.Repositories;
+using Interface.Shared;
 
 namespace Infrastructure.Data
 {
+    /// <summary>
+    /// Implement functions that are used for creating AsyncRepo for specified entity
+    /// </summary>
     public class UnitOfWork : IUnitOfWork
     {
         private readonly EFContext _dbContext;

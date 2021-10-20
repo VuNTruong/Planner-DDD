@@ -4,11 +4,15 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Domain.Base;
-using Domain.Interfaces;
+using Interface.Shared;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Data.Repositories
 {
+    /// <summary>
+    /// Used to implement basic CRUD functions
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class RepositoryBase<T> : IAsyncRepository<T> where T : BaseEntity
     {
         private readonly DbSet<T> _dbSet;

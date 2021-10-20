@@ -1,10 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Domain.Entities.WorkItems;
+using Domain.Entities;
+using Interface;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Data.Repositories
 {
+    /// <summary>
+    /// Used to implement extensions for WorkItem apart from basic CRUD functions
+    /// </summary>
     public class WorkItemRepository : RepositoryBase<WorkItem>, IWorkItemRepository
     {
         // The database context

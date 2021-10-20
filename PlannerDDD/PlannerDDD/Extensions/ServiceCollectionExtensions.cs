@@ -1,12 +1,11 @@
-﻿using System;
-using Domain.Entities.WorkItems;
-using Domain.Interfaces;
-using Infrastructure.Data;
+﻿using Infrastructure.Data;
 using Infrastructure.Data.Repositories;
+using Interface;
+using Interface.Shared;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using PlannerDDD.Services.WorkItems;
+using Services;
 
 namespace PlannerDDD.Extensions
 {
@@ -16,7 +15,8 @@ namespace PlannerDDD.Extensions
         {
             return services
                 .AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>))
-                .AddScoped<IWorkItemRepository, WorkItemRepository>();
+                .AddScoped<IWorkItemRepository, WorkItemRepository>()
+                .AddScoped<IUserProfileRepository, UserProfileRepository>();
         }
 
         public static IServiceCollection AddUnitOfWork(this IServiceCollection services)
@@ -35,7 +35,8 @@ namespace PlannerDDD.Extensions
         public static IServiceCollection AddBusinessServices(this IServiceCollection services)
         {
             return services
-                .AddScoped<WorkItemService>();
+                .AddScoped<WorkItemService>()
+                .AddScoped<AuthService>();
         }
     }
 }

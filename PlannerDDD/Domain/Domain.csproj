@@ -24,7 +24,6 @@
     <Folder Include="Interfaces\" />
     <Folder Include="Entities\Users\" />
     <Folder Include="Entities\UserProfiles\" />
-    <Folder Include="Entities\RoleDetails\" />
     <Folder Include="Entities\RoleDetailUserProfiles\" />
     <Folder Include="Entities\Roles\" />
   </ItemGroup>

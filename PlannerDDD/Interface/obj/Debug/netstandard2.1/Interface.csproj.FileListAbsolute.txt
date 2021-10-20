@@ -1,0 +1,13 @@
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Interface/bin/Debug/netstandard2.1/Interface.deps.json
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Interface/bin/Debug/netstandard2.1/Interface.dll
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Interface/bin/Debug/netstandard2.1/Interface.pdb
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Interface/bin/Debug/netstandard2.1/Domain.dll
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Interface/bin/Debug/netstandard2.1/Domain.pdb
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Interface/obj/Debug/netstandard2.1/Interface.csproj.AssemblyReference.cache
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Interface/obj/Debug/netstandard2.1/Interface.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Interface/obj/Debug/netstandard2.1/Interface.AssemblyInfoInputs.cache
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Interface/obj/Debug/netstandard2.1/Interface.AssemblyInfo.cs
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Interface/obj/Debug/netstandard2.1/Interface.csproj.CoreCompileInputs.cache
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Interface/obj/Debug/netstandard2.1/Interface.csproj.CopyComplete
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Interface/obj/Debug/netstandard2.1/Interface.dll
+/Users/vntruong/Documents/Visual Studio/PlannerDDD/PlannerDDD/Interface/obj/Debug/netstandard2.1/Interface.pdb
