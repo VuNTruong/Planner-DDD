@@ -69,6 +69,9 @@ namespace PlannerDDD
             // Add auto mapper
             services.AddAutoMapper(typeof(Startup));
 
+            // Add this in order to access HTTP context
+            services.AddHttpContextAccessor();
+
             // Configure JSON result
             services.AddControllers().AddJsonOptions(x =>
                 x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);

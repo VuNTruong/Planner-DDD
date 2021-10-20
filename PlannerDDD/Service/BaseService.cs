@@ -1,5 +1,4 @@
-﻿using System;
-using Interface.Shared;
+﻿using Infrastructure.Interface.Shared;
 
 namespace Services
 {

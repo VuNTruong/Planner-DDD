@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Domain.Base;
 
-namespace Interface.Shared
+namespace Infrastructure.Interface.Shared
 {
     /// <summary>
     /// Function definitions for methods that are used for saving changes in database and creating async repo for specified entity

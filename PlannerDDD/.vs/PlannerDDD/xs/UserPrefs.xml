@@ -1,9 +1,5 @@
 ﻿<Properties StartupConfiguration="{19A356F2-6877-417E-97CA-DD2C870C276D}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="PlannerDDD/Controllers/AuthController.cs">
-    <Files>
-      <File FileName="PlannerDDD/Controllers/WorkItemController.cs" Line="60" Column="1" />
-      <File FileName="PlannerDDD/Controllers/AuthController.cs" Line="15" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Infrastructure/Data/Repositories/RepositoryBase.cs">
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -14,19 +10,20 @@
             </Node>
             <Node name="Infrastructure" expanded="True">
               <Node name="Data" expanded="True">
-                <Node name="EntitiesConfig" expanded="True" />
-                <Node name="Repositories" expanded="True" />
+                <Node name="Repositories" expanded="True">
+                  <Node name="RepositoryBase.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Interface" expanded="True">
+                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
-            <Node name="Interface" expanded="True">
-              <Node name="Shared" expanded="True" />
-            </Node>
+            <Node name="Interface" expanded="True" />
             <Node name="PlannerDDD" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="AuthController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Extensions" expanded="True" />
               <Node name="MapperConfig" expanded="True" />
+              <Node name="Properties" expanded="True" />
               <Node name="ViewModels" expanded="True" />
             </Node>
             <Node name="Service" expanded="True" />

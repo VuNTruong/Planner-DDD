@@ -1,6 +1,6 @@
-﻿using PlannerDDD.ViewModels.WorkItems;
-using AutoMapper;
+﻿using AutoMapper;
 using Domain.Entities;
+using PlannerDDD.ViewModels;
 
 namespace PlannerDDD.MapperConfig
 {

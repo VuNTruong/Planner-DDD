@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Domain.Base;
 using Infrastructure.Data.Repositories;
-using Interface.Shared;
+using Infrastructure.Interface.Shared;
 
 namespace Infrastructure.Data
 {

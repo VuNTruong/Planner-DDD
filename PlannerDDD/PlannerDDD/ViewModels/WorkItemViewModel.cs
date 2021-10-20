@@ -1,5 +1,5 @@
 ﻿using System;
-namespace PlannerDDD.ViewModels.WorkItems
+namespace PlannerDDD.ViewModels
 {
     public class WorkItemViewModel
     {

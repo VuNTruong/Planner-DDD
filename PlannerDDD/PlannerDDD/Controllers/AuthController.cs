@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Interface;
 using Microsoft.AspNetCore.Mvc;
-using PlannerDDD.ViewModels.Auth;
-using Services;
+using PlannerDDD.ViewModels;
 
 namespace PlannerDDD.Controllers
 {
@@ -11,10 +11,10 @@ namespace PlannerDDD.Controllers
     public class AuthController
     {
         // Auth service
-        private readonly AuthService _authService;
+        private readonly IAuthService _authService;
 
         // Constructor
-        public AuthController(AuthService authService)
+        public AuthController(IAuthService authService)
         {
             // Initialize auth service
             _authService = authService;

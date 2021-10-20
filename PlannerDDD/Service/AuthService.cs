@@ -1,27 +1,21 @@
 ﻿using System.Threading.Tasks;
 using Domain.Entities;
+using Infrastructure.Interface.Shared;
 using Interface;
-using Interface.Shared;
 using Microsoft.AspNetCore.Identity;
 
 namespace Services
 {
-    public class AuthService : BaseService
+    public class AuthService : BaseService, IAuthService
     {
-        // User profile repository
-        private IUserProfileRepository _userProfileRepository;
-
         // User manager and sign in manager
-        private UserManager<User> _userManager;
-        private SignInManager<User> _signInManager;
+        private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
 
         // Constructor
-        public AuthService(IUnitOfWork unitOfWork, IUserProfileRepository userProfileRepository,
+        public AuthService(IUnitOfWork unitOfWork,
             SignInManager<User> signInManager, UserManager<User> userManager) : base(unitOfWork)
         {
-            // Initialize user profile repository
-            _userProfileRepository = userProfileRepository;
-
             // Initialize sign in manager
             _signInManager = signInManager;
 

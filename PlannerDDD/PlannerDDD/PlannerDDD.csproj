@@ -10,7 +10,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="ViewModels\" />
-    <None Remove="ViewModels\WorkItems\" />
     <None Remove="Extensions\" />
     <None Remove="Newtonsoft.Json" />
     <None Remove="AutoMapper" />
@@ -19,15 +18,12 @@
     <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
     <None Remove="Microsoft.Extensions.Identity.Core" />
     <None Remove="Microsoft.AspNetCore.Identity" />
-    <None Remove="ViewModels\Auth\" />
     <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
-    <Folder Include="ViewModels\WorkItems\" />
     <Folder Include="Extensions\" />
     <Folder Include="MapperConfig\" />
-    <Folder Include="ViewModels\Auth\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />

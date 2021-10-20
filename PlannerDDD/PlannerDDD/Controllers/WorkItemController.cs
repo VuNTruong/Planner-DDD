@@ -1,24 +1,26 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using PlannerDDD.ViewModels.WorkItems;
-using Services;
+using PlannerDDD.ViewModels;
 
 namespace PlannerDDD.Controllers
 {
     [Route("api/v1/workitems")]
     [ApiController]
+    [Authorize]
     public class WorkItemController
     {
         // Work item service
-        private readonly WorkItemService _workItemService;
+        private readonly IWorkItemService _workItemService;
 
         // Auto mapper
         private IMapper _mapper;
 
         // Constructor
-        public WorkItemController(WorkItemService workItemService, IMapper mapper)
+        public WorkItemController(IWorkItemService workItemService, IMapper mapper)
         {
             // Initialize work item service
             _workItemService = workItemService;
@@ -28,7 +30,8 @@ namespace PlannerDDD.Controllers
         }
 
         // The function to get all work items
-        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        [HttpGet("getAllWorkItems")]
         public async Task<JsonResult> Get()
         {
             // Prepare response data for the client
@@ -48,6 +51,27 @@ namespace PlannerDDD.Controllers
             return new JsonResult(responseData);
         }
 
+        // The function to get work items of the currently logged in user
+        [HttpGet("getWorkItemsOfCurrentUser")]
+        public async Task<JsonResult> GetWorkItemsOfCurrentUser()
+        {
+            // Prepare response data for the client
+            var responseData = new Dictionary<string, object>();
+
+            // Call the function to get list of work items of current user
+            var workItems = await _workItemService.GetAllWorkItemsOfCurrentUser();
+
+            // Map list of work items into list of work item view models
+            var workItemViewModels = _mapper.Map<List<WorkItemViewModel>>(workItems);
+
+            // Add data to the response data
+            responseData.Add("status", "Done");
+            responseData.Add("data", workItemViewModels);
+
+            // Return the response
+            return new JsonResult(responseData);
+        }
+
         // The function to create the new work item
         [HttpPost]
         public async Task<JsonResult> Create([FromBody] WorkItemViewModel workItemViewModel)
@@ -57,6 +81,24 @@ namespace PlannerDDD.Controllers
 
             // Call the function to create new work item
             var newWorkItem = await _workItemService.CreateNewWorkItem(workItemViewModel.Title, workItemViewModel.Content, workItemViewModel.DateCreated, workItemViewModel.CreatorId);
+
+            // Add data to the response data
+            responseData.Add("status", "Done");
+            responseData.Add("data", newWorkItem);
+
+            // Return the response
+            return new JsonResult(responseData);
+        }
+
+        // The function to create new work item created by current user
+        [HttpPost("createNewWorkItemForCurrentUser")]
+        public async Task<JsonResult> CreateNewWorkItemByCurrentUser([FromBody] WorkItemViewModel workItemViewModel)
+        {
+            // Prepare response data for the client
+            var responseData = new Dictionary<string, object>();
+
+            // Call the function to create new work item
+            var newWorkItem = await _workItemService.CreateNewWorkItemByCurrentUser(workItemViewModel.Title, workItemViewModel.Content);
 
             // Add data to the response data
             responseData.Add("status", "Done");

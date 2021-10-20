@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace PlannerDDD.ViewModels.Auth
+namespace PlannerDDD.ViewModels
 {
     public class SignUpViewModel
     {

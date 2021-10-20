@@ -1,7 +1,8 @@
 ﻿using Infrastructure.Data;
 using Infrastructure.Data.Repositories;
+using Infrastructure.Interface;
+using Infrastructure.Interface.Shared;
 using Interface;
-using Interface.Shared;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -35,8 +36,9 @@ namespace PlannerDDD.Extensions
         public static IServiceCollection AddBusinessServices(this IServiceCollection services)
         {
             return services
-                .AddScoped<WorkItemService>()
-                .AddScoped<AuthService>();
+                .AddScoped<IWorkItemService, WorkItemService>()
+                .AddScoped<IAuthService, AuthService>()
+                .AddScoped<IUserService, UserService>();
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace Interface.Shared
+namespace Infrastructure.Interface.Shared
 {
     /// <summary>
     /// Basic CRUD functions

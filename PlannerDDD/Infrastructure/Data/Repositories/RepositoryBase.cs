@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Domain.Base;
-using Interface.Shared;
+using Infrastructure.Interface.Shared;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Data.Repositories
@@ -42,6 +42,13 @@ namespace Infrastructure.Data.Repositories
         public Task<T> GetAsync(Expression<Func<T, bool>> expression)
         {
             return _dbSet.FirstOrDefaultAsync(expression);
+        }
+
+        // The function to get multiple entity that matches a specified expression and include connected entities
+        public Task<List<T>> GetEntitiesAsync(Expression<Func<T, bool>> searchQuery, Expression<Func<T, T>> includeQuery)
+        {
+            return
+                _dbSet.Where(searchQuery).ToListAsync();
         }
 
         // The function to list multiple entity that matches the specified expression
