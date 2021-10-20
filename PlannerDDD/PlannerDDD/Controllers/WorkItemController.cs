@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using PlannerDDD.ViewModels.WorkItems;
 using Services;
@@ -13,11 +14,17 @@ namespace PlannerDDD.Controllers
         // Work item service
         private readonly WorkItemService _workItemService;
 
+        // Auto mapper
+        private IMapper _mapper;
+
         // Constructor
-        public WorkItemController(WorkItemService workItemService)
+        public WorkItemController(WorkItemService workItemService, IMapper mapper)
         {
             // Initialize work item service
             _workItemService = workItemService;
+
+            // Initialize auto mapper
+            _mapper = mapper;
         }
 
         // The function to get all work items
@@ -30,9 +37,12 @@ namespace PlannerDDD.Controllers
             // Call the function to get response
             var workItems = await _workItemService.GetAllWorkItems();
 
+            // Map list of work items into list of work item view models
+            var workItemViewModels = _mapper.Map<List<WorkItemViewModel>>(workItems);
+
             // Add data to the response data
             responseData.Add("status", "Done");
-            responseData.Add("data", workItems);
+            responseData.Add("data", workItemViewModels);
             
             // Return the response
             return new JsonResult(responseData);

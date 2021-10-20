@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Interface.Shared
+namespace Entities
 {
     public interface IAggregateRoot
     {

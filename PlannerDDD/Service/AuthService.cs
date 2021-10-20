@@ -62,5 +62,12 @@ namespace Services
             // Return result
             return result.Succeeded;
         }
+
+        // The function to sign out
+        public async Task SignOut()
+        {
+            // Call the function to sign the user out and get the result
+            await _signInManager.SignOutAsync();
+        }
     }
 }

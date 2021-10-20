@@ -69,5 +69,23 @@ namespace PlannerDDD.Controllers
             // Return the response
             return new JsonResult(responseData);
         }
+
+        // The function to sign out
+        [HttpPost("SignOut")]
+        public async Task<JsonResult> SignOut()
+        {
+            // Prepare response data for the client
+            var responseData = new Dictionary<string, object>();
+
+            // Call the function to sign a user out
+            await _authService.SignOut();
+
+            // Add data to the response data
+            responseData.Add("status", "Done");
+            responseData.Add("data", "You are signed out");
+
+            // Return the response
+            return new JsonResult(responseData);
+        }
     }
 }

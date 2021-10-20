@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Domain.Base;
-using Domain.Interfaces;
+using Entities;
 
 namespace Domain.Entities
 {
