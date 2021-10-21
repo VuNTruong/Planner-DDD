@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using Interface;
 using Microsoft.AspNetCore.Mvc;
 using PlannerDDD.ViewModels;
-using Services;
 
 namespace PlannerDDD.Controllers
 {
@@ -13,13 +12,13 @@ namespace PlannerDDD.Controllers
     public class UserController
     {
         // User service
-        private readonly UserService _userService;
+        private readonly IUserService _userService;
 
         // Auto mapper
         private readonly IMapper _mapper;
 
         // Constructor
-        public UserController(UserService userService, IMapper mapper)
+        public UserController(IUserService userService, IMapper mapper)
         {
             // Initialize user service
             _userService = userService;

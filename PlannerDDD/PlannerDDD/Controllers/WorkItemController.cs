@@ -30,7 +30,7 @@ namespace PlannerDDD.Controllers
         }
 
         // The function to get all work items
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Manager")]
         [HttpGet("getAllWorkItems")]
         public async Task<JsonResult> Get()
         {

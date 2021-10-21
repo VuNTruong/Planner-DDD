@@ -17,7 +17,9 @@ namespace PlannerDDD.Extensions
             return services
                 .AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>))
                 .AddScoped<IWorkItemRepository, WorkItemRepository>()
-                .AddScoped<IUserProfileRepository, UserProfileRepository>();
+                .AddScoped<IUserProfileRepository, UserProfileRepository>()
+                .AddScoped<IRoleRepository, RoleRepository>()
+                .AddScoped<IRoleDetailUserProfileRepository, RoleDetailUserProfileRepository>();
         }
 
         public static IServiceCollection AddUnitOfWork(this IServiceCollection services)
@@ -38,7 +40,9 @@ namespace PlannerDDD.Extensions
             return services
                 .AddScoped<IWorkItemService, WorkItemService>()
                 .AddScoped<IAuthService, AuthService>()
-                .AddScoped<IUserService, UserService>();
+                .AddScoped<IUserService, UserService>()
+                .AddScoped<IRoleService, RoleService>()
+                .AddScoped<ISendEmailService, SendEmailService>();
         }
     }
 }

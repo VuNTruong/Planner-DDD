@@ -11,5 +11,11 @@ namespace Infrastructure.Interface
 
         // The function to get user object of the currently logged in user
         public Task<UserProfile> GetCurrentUserObject();
+
+        // The function to get user object of the user with specified user id
+        public Task<UserProfile> GetUserObjectBasedOnId(int userId);
+
+        // The function to get user object of the user with specified email
+        public Task<UserProfile> GetUserObjectBasedOnEmail(string userEmail);
     }
 }

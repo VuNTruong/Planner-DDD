@@ -49,5 +49,29 @@ namespace Infrastructure.Data.Repositories
             // Return the obtained user object
             return currentUserObject;
         }
+
+        // The function to get user object based on id
+        public async Task<UserProfile> GetUserObjectBasedOnId(int userId)
+        {
+            // Reference the database to get user object of the user based on id
+            var userObject = await _databaseContext.UserProfiles
+                .Include(userProfile => userProfile.User)
+                .FirstOrDefaultAsync(userProfile => userProfile.Id == userId);
+
+            // Return the obtained user object
+            return userObject;
+        }
+
+        // The function to get user object based on email
+        public async Task<UserProfile> GetUserObjectBasedOnEmail(string userEmail)
+        {
+            // Reference the database to get user object of the user based on email
+            var userObject = await _databaseContext.UserProfiles
+                .Include(userProfile => userProfile.User)
+                .FirstOrDefaultAsync(userProfile => userProfile.User.Email == userEmail);
+
+            // Return the obtained user object
+            return userObject;
+        }
     }
 }

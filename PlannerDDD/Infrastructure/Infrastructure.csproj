@@ -12,6 +12,7 @@
     <None Remove="Microsoft.AspNetCore.Http" />
     <None Remove="Interface\" />
     <None Remove="Interface\Shared\" />
+    <None Remove="Microsoft.AspNetCore.Identity.UI" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />

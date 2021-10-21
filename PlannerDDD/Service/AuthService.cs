@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Domain.Entities;
+using Infrastructure.Interface;
 using Infrastructure.Interface.Shared;
 using Interface;
 using Microsoft.AspNetCore.Identity;
@@ -12,15 +13,28 @@ namespace Services
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
 
+        // User profile repository
+        private readonly IUserProfileRepository _userProfileRepository;
+
+        // Send email service
+        private readonly ISendEmailService _sendEmailService;
+
         // Constructor
         public AuthService(IUnitOfWork unitOfWork,
-            SignInManager<User> signInManager, UserManager<User> userManager) : base(unitOfWork)
+            SignInManager<User> signInManager, UserManager<User> userManager, IUserProfileRepository userProfileRepository,
+            ISendEmailService sendEmailService) : base(unitOfWork)
         {
             // Initialize sign in manager
             _signInManager = signInManager;
 
             // Initialize user manager
             _userManager = userManager;
+
+            // Initialize user profile repository
+            _userProfileRepository = userProfileRepository;
+
+            // Initialize send email service
+            _sendEmailService = sendEmailService;
         }
 
         // The function to sign up a new account
@@ -62,6 +76,27 @@ namespace Services
         {
             // Call the function to sign the user out and get the result
             await _signInManager.SignOutAsync();
+        }
+
+        // The function to send password reset email to the user with specified email
+        public async Task<string> SendPasswordResetEmail(string email)
+        {
+            // Call the function to get user object based on email
+            var userObject = await _userProfileRepository.GetUserObjectBasedOnEmail(email);
+
+            // If user object is null, it means that user entered the email that does not exist
+            if (userObject == null) {
+                return "No such email";
+            }
+
+            // Call the function to get password reset token for the user
+            string passwordResetToken = await _userManager.GeneratePasswordResetTokenAsync(userObject.User);
+
+            // Send email with password reset token
+            await _sendEmailService.SendEmailAsync(email, "Reset password", $"Use this token to reset your password {passwordResetToken}");
+
+            // Return result
+            return "Email sent";
         }
     }
 }

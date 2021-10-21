@@ -13,11 +13,17 @@ namespace PlannerDDD.Controllers
         // Auth service
         private readonly IAuthService _authService;
 
+        // Send email service
+        private readonly ISendEmailService _sendEmailService;
+
         // Constructor
-        public AuthController(IAuthService authService)
+        public AuthController(IAuthService authService, ISendEmailService sendEmailService)
         {
             // Initialize auth service
             _authService = authService;
+
+            // Initialize send email service
+            _sendEmailService = sendEmailService;
         }
 
         // The function to sign up a new account

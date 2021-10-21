@@ -11,10 +11,12 @@
     <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
     <None Remove="Entities\UserProfile\" />
     <None Remove="Entities\RoleDetail\" />
+    <None Remove="Mail\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Base\" />
     <Folder Include="Entities\" />
+    <Folder Include="Mail\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" Version="9.0.0" />
